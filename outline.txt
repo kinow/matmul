@@ -8,7 +8,7 @@ matmul_ijk_op1
 matmul_ijk_op2
 ------------------------------------------------------------------------------
 
-We will use GCC 8.30 in FT2.
+We will use GCC 10.1.0 in FT3.
 We will perform matrix multiplication for 2048x2048 size matrices.
 Matrix size is a parameter in the code (eg. ./matmul_ijk 2048 is executing the
 code for 2048x2048 matrices).
