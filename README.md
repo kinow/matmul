@@ -64,7 +64,7 @@
 
    + Column **O3m**
 
-## 12. make O="-Ofast -march=icelake-server -mtune=icelake-server"
+## 12. make O="-Ofast -march=native -mtune=icelake-server"
 
     + This is usually the top optimization level in GCC
 
