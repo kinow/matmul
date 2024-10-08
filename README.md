@@ -54,7 +54,7 @@
 
    + Column **O3**
 
-## 10. make O="-O3 -march=icelake-server -mtune=icelake-server"
+## 10. make O="-O3 -march=native -mtune=icelake-server"
 
    Just `make` also does the same, as this is the default in the makefile
 
