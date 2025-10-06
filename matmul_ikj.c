@@ -35,4 +35,5 @@ void matmul(const unsigned int nrowsA, const unsigned int mcolsA,
     for(k = 0; k < mcolsA; k++)
       for(j = 0; j < pcolsB; j++)
         // Computation
+        arrayR[i*pcolsB+j] += arrayA[i*mcolsA+k] * arrayB[k*pcolsB+j];
 }

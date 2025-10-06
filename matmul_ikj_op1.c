@@ -32,14 +32,15 @@ void matmul(const unsigned int nrowsA, const unsigned int mcolsA,
   unsigned int i, j, k, ii, kk, iik;
 
   for(i = 0; i < nrowsA; i++) {
-    ii = i*mcolsA;
+    ii = i*mcolsA; // which row of A?
 
     for(k = 0; k < mcolsA; k++) {
-      kk = k*pcolsB;
-      iik = ii+k;
+      kk = k*pcolsB; // which col of B?
+      iik = ii+k; // which col of A?
 
-      for(j = 0; j < pcolsB; j++)
+      for(j = 0; j < pcolsB; j++) // advance one by one over cols of B...
         // Computation
+        arrayR[ii + j] += arrayA[iik] * arrayB[kk +j];
     }
   }
 }

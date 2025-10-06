@@ -1,4 +1,4 @@
-TARGETS = matmul_ijk matmul_ijk_op1 matmul_ijk_op2
+TARGETS = matmul_ijk matmul_ijk_op1 matmul_ijk_op2 matmul_ikj matmul_ikj_op1 matmul_ikj_op2
 
 CC = gcc
 
@@ -24,6 +24,14 @@ matmul_ikj_op1: matmul.o matmul_ikj_op1.o stuff.o
 matmul_ikj_op2: matmul.o matmul_ikj_op2.o stuff.o
 
 matmul_ikj_op2op: matmul.o matmul_ikj_op2op.o stuff.o
+
+runall:
+	./matmul_ijk
+	./matmul_ijk_op1
+	./matmul_ijk_op2
+	./matmul_ikj
+	./matmul_ikj_op1
+	./matmul_ikj_op2
 
 OBJS = ${TARGETS:=.o}
 
