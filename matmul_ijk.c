@@ -4,6 +4,7 @@
 //
 
 #include "matmul.h"
+#include "stdio.h"
 
 /* IJK
 
@@ -34,5 +35,5 @@ void matmul(const unsigned int nrowsA, const unsigned int mcolsA,
   for(i = 0; i < nrowsA; i++)
     for(j = 0; j < pcolsB; j++)
       for(k = 0; k < mcolsA; k++)
-        arrayR[i*mcolsA+j] += arrayA[i*mcolsA+k] * arrayB[k*pcolsB+j];
+        arrayR[i*pcolsB+j] += arrayA[i*mcolsA+k] * arrayB[k*pcolsB+j];
 }
